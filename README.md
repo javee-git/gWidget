@@ -12,7 +12,8 @@ The architecture of gWidget mainly consists of three components:
      and it needs one line of javascript,
      var z=new SuggestComboBase("combo_zone4","alfa4",400);
      (for more see **index.html**)
-     
-**2nd and 3rd version will be added soon with an updated version.
-**If you find any bug or problem please mention it on issue page.
-**Any contribution is appreciated.
+
+
+**2nd and 3rd version will be added soon with an updated version.**
+**If you find any bug or problem please mention it on issue page.**
+**Any contribution is appreciated.**
