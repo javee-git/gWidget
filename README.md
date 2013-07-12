@@ -14,6 +14,6 @@ The architecture of gWidget mainly consists of three components:
      (for more see **index.html**)
 
 
-**2nd and 3rd version will be added soon with an updated version.**
+**2nd and 3rd version will be added soon with an updated version.**\n
 **If you find any bug or problem please mention it on issue page.**
 **Any contribution is appreciated.**
