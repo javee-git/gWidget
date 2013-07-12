@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<title>ahakj</title>
+		<link rel="STYLESHEET" type="text/css" href="main.css">
+		<script  src="base.js"></script>
+		<script  src="data.js"></script>
+		<script  src="trie-old.js"></script>
+		<script>
+		function onLoad(){
+			window.Suggest_globalImgPath="imgs/";
+			var z=new SuggestComboBase("combo_zone4","alfa4",400);
+			z.addOption(cityList.arrayValues);
+	   		z.enableFilteringMode(true);
+	   		z.attachEvent("onOpen",function(){
+	   			var text = z.getComboText();
+				window.setTimeout(function(){
+	   				z.setComboText("");
+	   				z.filterSelf();
+	   				z.setComboText(text);
+	   				z.DOMelem_input.focus();
+	   			},0)
+	   		});
+		};
+     	</script>
+	</head>
+	<body onload="(x=true)">
+	<br>
+ 	<h3>From Remote File</h3>
+	<div id="combo_zone4" style = "height:30px">
+		
+	</div>
+	<script>
+		onLoad();
+	</script>
+	</body>
+</html>
