@@ -28,17 +28,17 @@ The architecture of gWidget mainly consists of three components:
       });
       
       To customize this component it needs to change the following values:
-     <b> dp_id_name: </b>
+      dp_id_name: 
            location where the datepicker is to be displayed.
-     <b> id_name:** </b>
+      id_name:
            selector id where to populate a selected date.
-     <b> display_count:** </b>
+      display_count:
            number of months to display in datepicker,default is 1,maximum is 2.
-     <b>max_date: </b>
+      max_date: 
            maximum date user can scroll forward to default is 1Y (one year)  acceptable values: 0, 3M, 6M, 9M, 1Y, 2Y, * (infinity)
-     <b>min_date:</b>
+      min_date:
            minimum date user can scroll backward to default is 0 (current date)  acceptable values: 0, 3M, 6M, 9M, 1Y, 2Y, * (infinity)
-    <b>close_onselect:</b>
+      close_onselect:
           default is true, acceptable values: true | false.
     
     
