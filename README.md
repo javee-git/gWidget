@@ -5,7 +5,7 @@ The architecture of gWidget mainly consists of three components:
   2. Date-picker
   3. Support for features like one-way,round-trip and multi-city
 
-** 1.Autocomplete : **
+ <b>1.Autocomplete : </b>
      This component is simply a mixed effect of input text-box and select-box with added autocomplete/typeahead functionality.To enhance performance, trie data-structure(http://goo.gl/PTe6k) has been used instead of Regular Expressions.To integrate this component, it only needs to create a div
      
      /*<div id="combo_zone4" style = "height:30px"> */
