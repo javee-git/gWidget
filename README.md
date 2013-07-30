@@ -14,7 +14,7 @@ The architecture of gWidget mainly consists of three components:
      (for more see **index.html**)
 
 
-<b>2.Date-picker :<b>
+<b>2.Date-picker :</b>
       This component is a simple date-picker calendar written in javascript. To add this datepicker it needs to create one input attribute(in markup) and following lines of javascript:
       
       /*<input type="text" name="start-date" id="start-date" class="date-pick" readonly="readonly" value="mm/dd/yy" onclick="start_datepicker.show();" />*/
@@ -28,17 +28,17 @@ The architecture of gWidget mainly consists of three components:
       });
       
       To customize this component it needs to change the following values:
-     <i> dp_id_name: </i>
+     <b> dp_id_name: </b>
            location where the datepicker is to be displayed.
-     <i> id_name:** </i>
+     <b> id_name:** </b>
            selector id where to populate a selected date.
-     <i> display_count:** </i>
+     <b> display_count:** </b>
            number of months to display in datepicker,default is 1,maximum is 2.
-     <i>max_date: </i>
+     <b>max_date: </b>
            maximum date user can scroll forward to default is 1Y (one year)  acceptable values: 0, 3M, 6M, 9M, 1Y, 2Y, * (infinity)
-     <i>min_date:</i>
+     <b>min_date:</b>
            minimum date user can scroll backward to default is 0 (current date)  acceptable values: 0, 3M, 6M, 9M, 1Y, 2Y, * (infinity)
-    <i>close_onselect:</i>
+    <b>close_onselect:</b>
           default is true, acceptable values: true | false.
     
     
