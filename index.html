@@ -1,52 +1,39 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>calen</title>
-<script type="text/javascript" src="calen.js"></script>
-<link rel="stylesheet" type="text/css" href="calen.css" />
-<script type="text/javascript">
-var start_datepicker = calen({
-    dp_id_name: 'start-calen',      // selector id where to display the datepicker
-    id_name: 'start-date',                 // selector id where to populate a selected date
-    max_date: '1Y',
-    min_date: '0',
-    onDateSelected: function() { DatePicked('start-date', end_datepicker); }
-});
-
-var end_datepicker = calen({
-    dp_id_name: 'end-calen',        // selector id where to display the datepicker
-    id_name: 'end-date',                   // selector id where to populate a selected date
-    max_date: '1Y',
-    min_date: '0',
-    onDateSelected: function() { DatePicked('end-date'); }
-});
-</script>
-<style type="text/css">
-
-
-</style>
-</head>
-
-<body>
-<div id="jrs_calendar_form">
-    <input type="hidden" name="sDay" id="sDay" value="dd" />
-    <input type="hidden" name="sMonth" id="sMonth" value="mm" />
-    <input type="hidden" name="sYear" id="sYear" value="yy" />
-    
-    <!-- From Date -->
-    <div id="jrs_arrival_input">
-        <div class="jrs_form_text">From:</div>
-        <span class="jrdp_calendar_pos" id="start-calen"></span>
-        <input type="text" name="start-date" id="start-date" class="date-pick" readonly="readonly" value="mm/dd/yy" onclick="start_datepicker.show();" />
-        <img class="ui-datepicker-trigger" src="calen.png" height="50" width="50" onclick="start_datepicker.show();" alt="" />
-    </div>
-    <!-- To Date -->
-    <div id="jrs_departure_input">
-        <div class="jrs_form_text">To:</div>
-        <span class="jrdp_calendar_pos" id="end-calen"></span>
-        <input type="text" name="end-date" id="end-date" class="date-pick" readonly="readonly" value="mm/dd/yy" onclick="end_datepicker.show();" />
-        <img class="ui-datepicker-trigger" src="calen.png" height="50" width="50" onclick="end_datepicker.show();" alt="" />
-    </div>
-</div>
-</body>
+<!DOCTYPE html>
+<html>
+  <head>
+    	<title>gWidget</title>
+		<link rel="STYLESHEET" type="text/css" href="main.css">
+		<script  src="base.js"></script>
+		<script  src="data.js"></script>
+		<script  src="trie-old.js"></script>
+		<script  src="trie.js"></script>
+		<script>
+		function onLoad(){
+			window.Suggest_globalImgPath="imgs/";
+			x = true;
+			var z=new SuggestComboBase("combo_zone4","alfa4",400);
+			z.addOption(cityList.arrayValues);
+	   		z.enableFilteringMode(true);
+	   		z.attachEvent("onOpen",function(){
+	   			var text = z.getComboText();
+				window.setTimeout(function(){
+					z.setComboText("");
+	   				z.filterSelf();
+	   				z.setComboText(text);
+	   				z.DOMelem_input.focus();
+	   			},0)
+	   		});
+		};
+     	</script>
+	</head>
+	<body>
+	<br>
+ 	<h3>From Remote File</h3>
+	<div id="combo_zone4" style = "height:30px">
+		
+	</div>
+	<script>
+		onLoad();
+	</script>
+	</body>
 </html>
