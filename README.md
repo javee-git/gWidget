@@ -5,7 +5,7 @@ The architecture of gWidget mainly consists of three components:
   2. Date-picker
   3. Support for features like one-way,round-trip and multi-city
 
-1.Autocomplete :
+** 1.Autocomplete : **
      This component is simply a mixed effect of input text-box and select-box with added autocomplete/typeahead functionality.To enhance performance, trie data-structure(http://goo.gl/PTe6k) has been used instead of Regular Expressions.To integrate this component, it only needs to create a div
      
      /*<div id="combo_zone4" style = "height:30px"> */
@@ -14,8 +14,35 @@ The architecture of gWidget mainly consists of three components:
      (for more see **index.html**)
 
 
-**2nd and 3rd component will be added soon with an updated version.**
-
+** 2.Date-picker : **
+      This component is a simple date-picker calendar written in javascript. To add this datepicker it needs to create one input attribute(in markup) and following lines of javascript:
+      
+      /*<input type="text" name="start-date" id="start-date" class="date-pick" readonly="readonly" value="mm/dd/yy" onclick="start_datepicker.show();" />*/
+      var start_datepicker = calen({
+      dp_id_name: 'start-calen',     
+      id_name: 'start-date',                
+      max_date: '1Y',
+      min_date: '0',
+      display_count:2,
+      onDateSelected: function() { DatePicked('start-date', end_datepicker); }
+      });
+      
+      To customize this component it needs to change the following values:
+      **dp_id_name:** 
+           location where the datepicker is to be displayed.
+      **id_name:**
+           selector id where to populate a selected date.
+      **display_count:**
+           number of months to display in datepicker,default is 1,maximum is 2.
+      **max_date:**
+           maximum date user can scroll forward to default is 1Y (one year)  acceptable values: 0, 3M, 6M, 9M, 1Y, 2Y, * (infinity)
+      **min_date:**
+           minimum date user can scroll backward to default is 0 (current date)  acceptable values: 0, 3M, 6M, 9M, 1Y, 2Y, * (infinity)
+      **close_onselect:**
+          default is true, acceptable values: true | false.
+    
+    
+     (for more see **calendar/index.html**)
 
 **If you find any bug or problem please mention it on issue page.**
 
